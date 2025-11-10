@@ -19,7 +19,4 @@ build-backend = "hatchling.build"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/specify_cli"]
-force-include = {
-    "templates/" = "specify-cli/templates"
-}
 
