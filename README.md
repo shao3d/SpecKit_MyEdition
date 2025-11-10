@@ -4,7 +4,7 @@
 </div>
 
 <p align="center">
-    <strong>A lightweight MVP toolkit for rapid spec-driven development.</strong>
+    <strong>A lightweight toolkit for rapid spec-driven MVP development.</strong>
 </p>
 
 <p align="center">
@@ -24,11 +24,11 @@ Install uv:
 curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
-## 🤔 What is Spec-Driven Development?
+## 🤔 What is Spec-Driven MVP Development?
 
-Spec-Driven Development **flips the script** on traditional software development. For decades, code has been king — specifications were just scaffolding we built and discarded once the "real work" of coding began. Spec-Driven Development changes this: **specifications become executable**, directly generating working implementations rather than just guiding them.
+Spec-Driven MVP Development **flips the script** on traditional MVP development. For decades, code has been king — specifications were just scaffolding we built and discarded once the "real work" of coding began. Spec-Driven MVP Development changes this: **specifications become executable**, directly generating working MVP implementations rather than just guiding them.
 
-**This MVP implementation focuses on lightweight, rapid project documentation** - perfect for startups, prototypes, and teams that need to move fast without getting bogged down in enterprise-level documentation overhead.
+**This toolkit focuses on lightweight, rapid MVP documentation** - perfect for startups, prototypes, and teams that need to move fast without getting bogged down in enterprise-level documentation overhead.
 
 ## ⚡ Get Started
 
@@ -125,7 +125,7 @@ rm gcm-linux_amd64.2.6.1.deb
 
 ## 💬 Support
 
-For support, please open a [GitHub issue](https://github.com/shao3d/SpecKit_MVPedition/issues/new). We welcome bug reports, feature requests, and questions about using Spec-Driven Development.
+For support, please open a [GitHub issue](https://github.com/shao3d/SpecKit_MVPedition/issues/new). We welcome bug reports, feature requests, and questions about using Spec-Driven MVP Development.
 
 ## 📄 License
 
