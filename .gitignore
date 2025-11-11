@@ -32,6 +32,11 @@ env/
 *.swp
 *.swo
 .DS_Store
+._*
+
+# System files
+Thumbs.db
+*.lnk
 
 # Project specific
 *.log
@@ -44,3 +49,12 @@ env/
 *.zip
 sdd-*/
 temp_analysis_projects/
+
+# Cache and temporary directories
+.gemini-clipboard/
+cache/
+tmp/
+
+# Documentation build artifacts
+docs/_site/
+docs/obj/
