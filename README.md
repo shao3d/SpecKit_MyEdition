@@ -30,6 +30,16 @@ Spec-Driven MVP Development **flips the script** on traditional MVP development.
 
 **This toolkit focuses on lightweight, rapid MVP documentation** - perfect for startups, prototypes, and teams that need to move fast without getting bogged down in enterprise-level documentation overhead.
 
+### 🎯 The Constitution: Practical Rules for MVP Success
+
+Every project initialized with Spec Kit includes a `Constitution.md` file containing practical development rules based on three core principles:
+
+- **KISS (Keep It Simple, Stupid):** Always choose the simplest solution that works
+- **DRY (Don't Repeat Yourself):** Avoid duplicating business logic
+- **YAGNI (You Ain't Gonna Need It):** Don't build features you might need "someday"
+
+**The constitution isn't just philosophy — it's a practical checklist with 10 concrete rules** covering architecture, dependencies, data management, and testing. AI assistants automatically reference these rules when generating technical plans and tasks, ensuring your MVP stays lean and maintainable.
+
 ## ⚡ Get Started
 
 This guide describes the lightweight, MVP-focused workflow.
@@ -47,7 +57,7 @@ uv tool install specify-cli --from git+https://github.com/shao3d/SpecKit_MVPedit
 
 ### 2. Initialize Your Project
 
-Navigate to your projects directory and run the `init` command. It will create a new folder with all the necessary templates.
+Navigate to your projects directory and run the `init` command. It will create a new folder with all the necessary templates, including your project's **Constitution.md** with practical MVP development rules.
 ```bash
 # Go to your development folder
 cd ~/Documents/Projects
@@ -55,6 +65,12 @@ cd ~/Documents/Projects
 # Create the project
 specify init my-new-project
 ```
+
+**What gets created:**
+- 📋 `Constitution.md` - Your project's practical development rules
+- 📁 `.specify/templates/` - AI command templates for spec-driven development
+- 🗂️ Template files for `spec.md`, `plan.md`, and `tasks.md`
+- 📂 Git repository (optional)
 
 ### 3. Start the Manual Workflow
 
@@ -75,6 +91,45 @@ This tool prepares a project for a conversational, manual workflow with an AI as
     ```
 
 The AI agent will then guide you through the three stages: creating the `spec.md`, `plan.md`, and `tasks.md` files.
+
+### 🤖 How AI Assistants Use Your Constitution
+
+Your project's `Constitution.md` isn't just for humans — AI assistants automatically reference it during development:
+
+- **When creating technical plans (`plan.md`)**: AI reads the Constitution and ensures all architectural decisions and technology choices comply with the practical rules
+- **When generating tasks (`tasks.md`)**: AI verifies that the proposed implementation steps don't violate the KISS, DRY, and YAGNI principles
+
+This ensures your MVP stays lean, maintainable, and focused on rapid delivery without unnecessary complexity.
+
+## 📋 MVP Development Principles
+
+### The Constitution Rules
+
+Your project's `Constitution.md` contains 10 practical rules organized into four categories:
+
+#### 🏗️ Architecture & Code
+1. **No premature abstractions** - Start simple, refactor to patterns only when you have a second use case
+2. **Prefer standard tools** - Use built-in language/framework features before adding libraries
+3. **Configuration in code** - Hardcode values initially, avoid complex config systems
+4. **Single responsibility functions** - Keep functions short and focused
+
+#### 📦 Dependency Management
+5. **Minimal external libraries** - Add dependencies only if they save days, not hours
+6. **Choose proven solutions** - Prefer popular, well-maintained libraries over experimental ones
+
+#### 💾 Data & State
+7. **Simple data schema** - Start with flat structures, avoid complex relationships initially
+8. **Forward-only migrations** - Write one-time scripts instead of complex migration systems
+
+#### 🧪 Pragmatic Testing
+9. **Test the main path** - Focus on integration tests for key user scenarios, not 100% coverage
+10. **Use mocks sparingly** - Prefer real test dependencies over extensive mocking
+
+### Pre-commit Checklist
+Before committing changes, ask yourself:
+- [ ] Can I make this simpler? (KISS)
+- [ ] Am I duplicating logic elsewhere? (DRY)
+- [ ] Do I really need this feature right now? (YAGNI)
 
 ## 🔧 Specify CLI Reference
 
