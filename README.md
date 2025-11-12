@@ -87,7 +87,8 @@ This tool prepares a project for a conversational, manual workflow with an AI as
 
 4. Start the process with a prompt like:
     ```
-    Let's start. Read the instructions from ./.specify/templates/commands/specify.md and my brief.md and we'll interactively create a draft of spec.md.
+    Let's start. Read the instructions from specify.md and my project  brief.md and
+      we'll interactively create a draft of spec.md.
     ```
 
 The AI agent will then guide you through the three stages: creating the `spec.md`, `plan.md`, and `tasks.md` files.
@@ -197,7 +198,7 @@ SpecKit_MVPedition is a modernized, lightweight version that:
 - Optimizes for startups, prototypes, and fast-moving teams
 - Maintains the core philosophy of spec-driven development while reducing complexity
 
-**We are deeply grateful to the original GitHub Spec Kit team for creating such an innovative approach to specification-driven development. Their work laid the foundation for this streamlined MVP edition.**
+**I'am deeply grateful to the original GitHub Spec Kit team for creating such an innovative approach to specification-driven development. Their work laid the foundation for this streamlined MVP edition.**
 
 This project maintains the same MIT license spirit as the original, ensuring open access to the spec-driven development methodology.
 
