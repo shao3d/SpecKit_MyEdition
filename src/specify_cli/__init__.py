@@ -115,7 +115,7 @@ def init_git_repo(project_path: Path) -> Tuple[bool, Optional[str]]:
 def generate_constitution(project_path: Path):
     """Generates Constitution.md from template in the project root."""
     try:
-        # Надежный способ чтения файла из пакета
+        # Reliable way to read file from package
         content = importlib.resources.files('specify_cli.templates').joinpath('constitution-template.md').read_text(encoding='utf-8')
 
         constitution_path = project_path / "Constitution.md"
@@ -124,14 +124,14 @@ def generate_constitution(project_path: Path):
         console.print(f"[green]✓[/green] Constitution.md created at {constitution_path}")
 
     except FileNotFoundError:
-        # Эта ошибка означает, что пакет был собран неправильно
-        console.print("[red]Критическая ошибка: Файл шаблона конституции отсутствует в установленном пакете. Попробуйте переустановить specify-cli.[/red]")
+        # This error means the package was built incorrectly
+        console.print("[red]Critical error: Constitution template file is missing from the installed package. Try reinstalling specify-cli.[/red]")
     except IOError as e:
-        # Эта ошибка связана с правами на запись в файловой системе
-        console.print(f"[red]Ошибка записи файла Constitution.md: {e}[/red]")
+        # This error is related to file system write permissions
+        console.print(f"[red]Error writing Constitution.md file: {e}[/red]")
     except Exception as e:
-        # Все остальные непредвиденные ошибки
-        console.print(f"[red]Неизвестная ошибка при создании Constitution.md: {e}[/red]")
+        # All other unexpected errors
+        console.print(f"[red]Unknown error creating Constitution.md: {e}[/red]")
 
 def copy_local_template(project_path: Path, is_current_dir: bool):
     """Copies the local template directory to the new project."""

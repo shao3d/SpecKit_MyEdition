@@ -1,49 +1,49 @@
-# Конституция MVP-проекта
+# MVP Project Constitution
 
-**Цель этого документа:** Обеспечить максимальную скорость разработки и поставки ценности пользователю, избегая технического долга, который может замедлить или остановить проект на ранней стадии. Этот документ — наш главный ориентир в принятии технических решений.
-
----
-
-## 1. Фундаментальные Принципы (The "Why")
-
-Мы руководствуемся тремя столпами быстрой и качественной разработки:
-
-*   **KISS (Keep It Simple, Stupid):** Простота — наша главная цель. Простое решение легче реализовать, тестировать, поддерживать и изменять. Мы всегда выбираем самый простой путь, который решает текущую задачу.
-*   **DRY (Don't Repeat Yourself):** Мы избегаем дублирования бизнес-логики. Единый источник правды для ключевых операций снижает количество ошибок и упрощает внесение изменений.
-*   **YAGNI (You Ain't Gonna Need It):** Мы не пишем код "про запас". Любая функциональность, которая не требуется для решения *сегодняшней* задачи, не реализуется.
+**Purpose of this document:** To ensure maximum development speed and user value delivery while avoiding technical debt that could slow or stop the project in its early stages. This document is our main guide for technical decision-making.
 
 ---
 
-## 2. Практические Правила (The "How-To")
+## 1. Fundamental Principles (The "Why")
 
-Эти правила — прямое следствие наших принципов.
+We are guided by three pillars of fast and quality development:
 
-### Код и Архитектура
-1.  **Никаких преждевременных абстракций.** Не создавайте сложные паттерны (сервисы, репозитории, слои) для единственного простого случая. Начинайте с самого прямолинейного кода. Рефакторинг к паттерну возможен только тогда, когда появляется *второй* реальный кейс его использования.
-2.  **Предпочитайте стандартные инструменты.** Вместо подключения новой библиотеки, сначала проверьте, нельзя ли решить задачу средствами стандартной библиотеки языка или основного фреймворка.
-3.  **Конфигурация — в коде.** Не создавайте сложные системы конфигурации и административные панели для параметров, которые меняются раз в год. На старте MVP жестко закодированные значения — это нормально.
-4.  **Одна функция — одна задача.** Функции и методы должны быть короткими и делать что-то одно. Это упрощает их понимание и тестирование.
-
-### Управление Зависимостями
-5.  **Минимум сторонних библиотек.** Каждая новая зависимость — это потенциальная проблема с безопасностью, производительностью и совместимостью в будущем. Добавляйте библиотеку только если она экономит *дни*, а не *часы* разработки.
-6.  **Выбирайте проверенные решения.** Если зависимость необходима, выбирайте популярные и хорошо поддерживаемые библиотеки, а не новейшие и экспериментальные.
-
-### Данные и Состояние
-7.  **Простая схема данных.** Начинайте с максимально простой и плоской структуры базы данных. Избегайте сложных связей и денормализации до тех пор, пока это не станет абсолютно необходимо для производительности.
-8.  **Миграции — только вперед.** Избегайте сложных миграций данных. Проще написать простой скрипт для одноразового преобразования, чем поддерживать сложную систему версионирования схемы на старте.
-
-### Прагматичное Тестирование
-9.  **Тестируйте главное.** 100% покрытие тестами — не цель для MVP. Сосредоточьтесь на интеграционных тестах, которые проверяют ключевые пользовательские сценарии (happy path) от начала до конца.
-10. **Моки — с осторожностью.** Предпочитайте тесты с реальными (или тестовыми) версиями зависимостей (например, с тестовой БД), а не с большим количеством моков. Это лучше выявляет реальные проблемы интеграции.
+* **KISS (Keep It Simple, Stupid):** Simplicity is our primary goal. A simple solution is easier to implement, test, maintain, and modify. We always choose the simplest path that solves the current task.
+* **DRY (Don't Repeat Yourself):** We avoid duplication of business logic. A single source of truth for key operations reduces the number of errors and simplifies making changes.
+* **YAGNI (You Ain't Gonna Need It):** We don't write code "just in case." Any functionality that is not required to solve *today's* task is not implemented.
 
 ---
 
-## 3. Лакмусовая бумажка: Чек-лист перед коммитом
+## 2. Practical Rules (The "How-To")
 
-Прежде чем сделать коммит, задайте себе эти вопросы:
+These rules are a direct consequence of our principles.
 
-- [ ] Могу ли я сделать это решение еще проще? (KISS)
-- [ ] Не написал ли я эту же логику где-то еще? (DRY)
-- [ ] Мне *действительно* нужна эта функция прямо сейчас для текущей задачи? (YAGNI)
-- [ ] Оправдана ли сложность, которую я добавляю?
-- [ ] Оправдана ли новая зависимость, которую я добавляю?
+### Code and Architecture
+1. **No premature abstractions.** Don't create complex patterns (services, repositories, layers) for a single simple case. Start with the most straightforward code. Refactoring to a pattern is only possible when a *second* real use case appears.
+2. **Prefer standard tools.** Instead of adding a new library, first check if the task can be solved using the language's standard library or main framework.
+3. **Configuration in code.** Don't create complex configuration systems and admin panels for parameters that change once a year. In an MVP, hardcoded values are normal.
+4. **One function - one task.** Functions and methods should be short and do one thing. This simplifies their understanding and testing.
+
+### Dependency Management
+5. **Minimal third-party libraries.** Every new dependency is a potential security, performance, and compatibility problem in the future. Add a library only if it saves *days*, not *hours* of development.
+6. **Choose proven solutions.** If a dependency is necessary, choose popular and well-maintained libraries, not the newest and most experimental ones.
+
+### Data and State
+7. **Simple data schema.** Start with the simplest and flattest possible database structure. Avoid complex relationships and denormalization until it becomes absolutely necessary for performance.
+8. **Migrations only forward.** Avoid complex data migrations. It's easier to write a simple one-time conversion script than to maintain a complex schema versioning system at the start.
+
+### Pragmatic Testing
+9. **Test the main thing.** 100% test coverage is not a goal for MVP. Focus on integration tests that check key user scenarios (happy path) from start to finish.
+10. **Use mocks with caution.** Prefer tests with real (or test) versions of dependencies (e.g., with a test database) rather than with lots of mocks. This better reveals real integration problems.
+
+---
+
+## 3. Litmus Test: Pre-commit Checklist
+
+Before making a commit, ask yourself these questions:
+
+- [ ] Can I make this solution even simpler? (KISS)
+- [ ] Have I written this same logic somewhere else? (DRY)
+- [ ] Do I *really* need this function right now for the current task? (YAGNI)
+- [ ] Is the complexity I'm adding justified?
+- [ ] Is the new dependency I'm adding justified?

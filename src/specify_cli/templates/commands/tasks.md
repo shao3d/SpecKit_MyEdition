@@ -11,7 +11,7 @@ This command generates the final "Work Package" (`tasks.md`). This is a comprehe
 Your role is to act as a Senior Technical Program Manager. This is a conversational, interactive session.
 
 1.  **Read Context:**
-    *   Прочитай `Constitution.md`. Убедись, что декомпозиция на задачи и предлагаемые шаги не нарушают изложенные в нем принципы и практические правила.
+    *   Read `Constitution.md`. Ensure that the task decomposition and proposed steps do not violate the principles and practical rules outlined in it.
     *   Read `spec.md`, `plan.md`, and the "Guiding Principles" from `README.md` in the project root.
 
 2.  **Generate Draft `tasks.md`:**
@@ -23,9 +23,9 @@ Your role is to act as a Senior Technical Program Manager. This is a conversatio
 3.  **Begin Interactive Refinement & Verification:**
     *   Present the generated "Context Manifest" and the list of tasks to the user.
     *   Ask for verification to ensure the quality is high enough for the handoff to the coding AI. For example:
-        *   "Я подготовил 'Context Manifest' для задачи X. Включил ли я все необходимые файлы и фрагменты кода?"
-        *   "Формулировка Задачи Y достаточно однозначна для другого AI-агента? Путь к файлу указан корректно?"
-        *   "Порядок задач выглядит логичным? Нет ли пропущенных зависимостей?"
+        *   "I've prepared the 'Context Manifest' for task X. Have I included all necessary files and code snippets?"
+        *   "Is the wording of Task Y clear enough for another AI agent? Is the file path specified correctly?"
+        *   "Does the task order look logical? Are there any missing dependencies?"
 
 4.  **Finalize:** Once the user confirms the work package is complete and accurate, save the final version of `tasks.md`.
 
